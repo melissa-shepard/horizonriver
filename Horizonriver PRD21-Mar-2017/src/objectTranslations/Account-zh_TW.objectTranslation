@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Status --></label>
+        <name>Account_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Grace period customers give until payment is due. If you are Net 30, put 30 in this field. If you are a Due Upon Receipt customer, put zero to make the issue and due date be the same. --></help>
+        <label><!-- Account Payable Days Due --></label>
+        <name>AcctSeed__Account_Payable_Terms__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates account is eligible for use in accounting application. --></help>
+        <label><!-- Accounting Active --></label>
+        <name>AcctSeed__Accounting_Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used in filtered lookups for Accounts Payable and Billing screens to limit selection of Accounts to those marked as Customers or Vendors for use by Accounting. --></help>
+        <label><!-- Accounting Type --></label>
+        <name>AcctSeed__Accounting_Type__c</name>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer and Vendor</masterLabel>
+            <translation><!-- Customer and Vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor</masterLabel>
+            <translation><!-- Vendor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Used to configure formatting and display of fields in Activity Statement PDF. Overrides the default Activity Statement defined in Accounting Settings. --></help>
+        <label><!-- Activity Statement Format --></label>
+        <name>AcctSeed__Activity_Statement_Format__c</name>
+        <relationshipLabel><!-- Accounts (Activity Statement Format) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Used as billing contact in Accounting Seed Billings. --></help>
+        <label><!-- Billing Contact --></label>
+        <name>AcctSeed__Billing_Contact__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Used to calculate billing due date. Billing date minus Billing days offset equals due date. --></help>
+        <label><!-- Billing Days Due --></label>
+        <name>AcctSeed__Billing_Days_Due__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to calculate payment due date for a prompt payment discount on a billing. --></help>
+        <label><!-- Billing Discount Days Due --></label>
+        <name>AcctSeed__Billing_Discount_Days_Due__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to determine the discount off the total price of a billing if payment is received within billing discount days due. --></help>
+        <label><!-- Billing Discount % --></label>
+        <name>AcctSeed__Billing_Discount_Percent__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field has been deprecated. --></help>
+        <label><!-- zDep-Billing Email --></label>
+        <name>AcctSeed__Billing_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name of the billing terms as you would like them to appear on the invoice. --></help>
+        <label><!-- Billing Terms Name --></label>
+        <name>AcctSeed__Billing_Terms_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field denotes a credit card vendor. If checked this account will display in the credit card field filtered lookup on the expense object. --></help>
+        <label><!-- Credit Card Vendor --></label>
+        <name>AcctSeed__Credit_Card_Vendor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Marks default 1099 box for reporting cash disbursements to a 1099 vendor. --></help>
+        <label><!-- Default 1099 Box --></label>
+        <name>AcctSeed__Default_1099_Box__c</name>
+        <picklistValues>
+            <masterLabel>1. Rents</masterLabel>
+            <translation><!-- 1. Rents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10. Crop Insurance</masterLabel>
+            <translation><!-- 10. Crop Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13. Golden Parachute</masterLabel>
+            <translation><!-- 13. Golden Parachute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14. Attorney Proceeds</masterLabel>
+            <translation><!-- 14. Attorney Proceeds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15a. Section 409A Deferrals</masterLabel>
+            <translation><!-- 15a. Section 409A Deferrals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15b. Section 409A Income</masterLabel>
+            <translation><!-- 15b. Section 409A Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16. State Tax Withheld</masterLabel>
+            <translation><!-- 16. State Tax Withheld --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Royalties</masterLabel>
+            <translation><!-- 2. Royalties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Other Income</masterLabel>
+            <translation><!-- 3. Other Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Federal Tax Withheld</masterLabel>
+            <translation><!-- 4. Federal Tax Withheld --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Fishing Boat Proceeds</masterLabel>
+            <translation><!-- 5. Fishing Boat Proceeds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Medical Payments</masterLabel>
+            <translation><!-- 6. Medical Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Nonemployee Compensation</masterLabel>
+            <translation><!-- 7. Nonemployee Compensation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Substitute Payments</masterLabel>
+            <translation><!-- 8. Substitute Payments --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If this field is populated and this account is selected as the vendor on an account payable, the account payable line Expense GL Account field will be populated with this value dynamically. --></help>
+        <label><!-- Default Expense GL Account --></label>
+        <name>AcctSeed__Default_Expense_GL_Account__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Used in the calculation of payment discounts in the accounts payable process. A discount will be automatically taken in the cash disbursements process if payment is made within the discount days due of the issue date. --></help>
+        <label><!-- Account Payable Discount Days Due --></label>
+        <name>AcctSeed__Discount_Days_Due__c</name>
+    </fields>
+    <fields>
+        <help><!-- The discount percentage of an account payable that a vendor provides as part of prompt payment terms. --></help>
+        <label><!-- Account Payable Discount % --></label>
+        <name>AcctSeed__Discount_Percent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to match the vendor account to a specific file import related transaction. This field is only used when importing financial files such as a bank statement via the Import Financial File tab. --></help>
+        <label><!-- File Import Match Name --></label>
+        <name>AcctSeed__File_Import_Match_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to configure formatting and display of fields in Outstanding Statement PDF. Overrides the default Outstanding Statement defined in Accounting Settings. --></help>
+        <label><!-- Outstanding Statement Format --></label>
+        <name>AcctSeed__Outstanding_Statement_Format__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shipping Contact --></label>
+        <name>AcctSeed__Shipping_Contact__c</name>
+        <relationshipLabel><!-- Accounts (Shipping Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Marks vendor to report cash disbursements on 1099-Misc form. --></help>
+        <label><!-- 1099 Vendor --></label>
+        <name>AcctSeed__X1099_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cable Provider --></label>
+        <name>Cable_Provider__c</name>
+        <picklistValues>
+            <masterLabel>BrightHouse</masterLabel>
+            <translation><!-- BrightHouse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buckeye Cable System Inc.</masterLabel>
+            <translation><!-- Buckeye Cable System Inc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cable One</masterLabel>
+            <translation><!-- Cable One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comcast: In Footprint</masterLabel>
+            <translation><!-- Comcast: In Footprint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comcast: Service Existing at this Address</masterLabel>
+            <translation><!-- Comcast: Service Existing at this Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comcast: Service Nearby</masterLabel>
+            <translation><!-- Comcast: Service Nearby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cox</masterLabel>
+            <translation><!-- Cox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GCI CABLE INC.</masterLabel>
+            <translation><!-- GCI CABLE INC. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LONGVIEW CABLE TELEVISION</masterLabel>
+            <translation><!-- LONGVIEW CABLE TELEVISION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mediacom</masterLabel>
+            <translation><!-- Mediacom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Cable Comp Assoc. w Address</masterLabel>
+            <translation><!-- No Cable Comp Assoc. w Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optimum</masterLabel>
+            <translation><!-- Optimum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spectrum</masterLabel>
+            <translation><!-- Spectrum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spectrum: Not Serviceable</masterLabel>
+            <translation><!-- Spectrum: Not Serviceable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SuddenLink</masterLabel>
+            <translation><!-- SuddenLink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Warner Cable</masterLabel>
+            <translation><!-- Time Warner Cable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wow</masterLabel>
+            <translation><!-- Wow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Equipment --></label>
+        <name>Equipment__c</name>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lease Option? --></label>
+        <name>Lease_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Clinic --></label>
+        <name>Legacy_Clinic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Match? --></label>
+        <name>Match__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orig Order --></label>
+        <name>Orig_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase Price --></label>
+        <name>Purchase_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Alabama/FL Panhandle</masterLabel>
+            <translation><!-- Alabama/FL Panhandle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atlanta</masterLabel>
+            <translation><!-- Atlanta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Austin</masterLabel>
+            <translation><!-- Austin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chicago</masterLabel>
+            <translation><!-- Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cin/KY/WV</masterLabel>
+            <translation><!-- Cin/KY/WV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleveland OH</masterLabel>
+            <translation><!-- Cleveland OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Columbus</masterLabel>
+            <translation><!-- Columbus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dallas/Ft. Worth</masterLabel>
+            <translation><!-- Dallas/Ft. Worth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Detroit</masterLabel>
+            <translation><!-- Detroit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Houston</masterLabel>
+            <translation><!-- Houston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indianapolis</masterLabel>
+            <translation><!-- Indianapolis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inland Empire</masterLabel>
+            <translation><!-- Inland Empire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa/Nebraska</masterLabel>
+            <translation><!-- Iowa/Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jacksonville</masterLabel>
+            <translation><!-- Jacksonville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas City</masterLabel>
+            <translation><!-- Kansas City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Las Vegas</masterLabel>
+            <translation><!-- Las Vegas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles Northeast</masterLabel>
+            <translation><!-- Los Angeles Northeast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles Northwest</masterLabel>
+            <translation><!-- Los Angeles Northwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles West</masterLabel>
+            <translation><!-- Los Angeles West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland/DC</masterLabel>
+            <translation><!-- Maryland/DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memphis</masterLabel>
+            <translation><!-- Memphis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miami</masterLabel>
+            <translation><!-- Miami --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minneapolis</masterLabel>
+            <translation><!-- Minneapolis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nashville</masterLabel>
+            <translation><!-- Nashville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico/Oklahoma</masterLabel>
+            <translation><!-- New Mexico/Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern NJ</masterLabel>
+            <translation><!-- Northern NJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orange County</masterLabel>
+            <translation><!-- Orange County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orlando</masterLabel>
+            <translation><!-- Orlando --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philadelphia</masterLabel>
+            <translation><!-- Philadelphia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pittsburgh</masterLabel>
+            <translation><!-- Pittsburgh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sacramento</masterLabel>
+            <translation><!-- Sacramento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Antonio</masterLabel>
+            <translation><!-- San Antonio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco East Bay</masterLabel>
+            <translation><!-- San Francisco East Bay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco Marin</masterLabel>
+            <translation><!-- San Francisco Marin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco South</masterLabel>
+            <translation><!-- San Francisco South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Louis</masterLabel>
+            <translation><!-- St. Louis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tampa</masterLabel>
+            <translation><!-- Tampa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia North</masterLabel>
+            <translation><!-- Virginia North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia South</masterLabel>
+            <translation><!-- Virginia South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales ID --></label>
+        <name>Sales_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site Name --></label>
+        <name>Site_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clinic Number --></label>
+        <name>Store_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Structure --></label>
+        <name>Structure__c</name>
+        <picklistValues>
+            <masterLabel>1NA00</masterLabel>
+            <translation><!-- 1NA00 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax Rate --></label>
+        <name>Tax_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term --></label>
+        <name>Term__c</name>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <picklistValues>
+            <masterLabel>Central</masterLabel>
+            <translation><!-- Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East</masterLabel>
+            <translation><!-- East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northeast</masterLabel>
+            <translation><!-- Northeast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northwest</masterLabel>
+            <translation><!-- Northwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West</masterLabel>
+            <translation><!-- West --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Transfer --></label>
+        <name>Transfer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor --></label>
+        <name>Vendor__c</name>
+        <picklistValues>
+            <masterLabel>G4316</masterLabel>
+            <translation><!-- G4316 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 8/24 Email Template --></label>
+        <name>X824EmailTemplate__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of IMB Opportunity --></label>
+        <name>of_IMB_Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of NMB Opportunity --></label>
+        <name>of_NMB_Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Opportunities --></label>
+        <name>of_Opportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Switches --></label>
+        <name>of_Switches__c</name>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- # of WAPs --></label>
+        <name>of_WAPs__c</name>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account&apos;s Email --></label>
+        <name>sendgrid4sf__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invalid Account --></label>
+        <name>sendgrid4sf__Invalid_SendGrid_Account__c</name>
+    </fields>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Location Information --></label>
+            <section>Location Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Information --></label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Client</layout>
+        <sections>
+            <label><!-- Account Payable Information --></label>
+            <section>Account Payable Information</section>
+        </sections>
+        <sections>
+            <label><!-- Accounting Information --></label>
+            <section>Accounting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Billing Information --></label>
+            <section>Billing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Location Information --></label>
+            <section>Location Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Information --></label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Massage Envy</layout>
+        <sections>
+            <label><!-- Location Information --></label>
+            <section>Location Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Information --></label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vendor</layout>
+        <sections>
+            <label><!-- Account Payable Information --></label>
+            <section>Account Payable Information</section>
+        </sections>
+        <sections>
+            <label><!-- Accounting Information --></label>
+            <section>Accounting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Billing Information --></label>
+            <section>Billing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Customer --></label>
+        <name>Customer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Vendor --></label>
+        <name>Vendor</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The account payable terms field must be a positive number. --></errorMessage>
+        <name>AcctSeed__Account_Payable_Terms_Positive_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The discount days due field must be a positive number. --></errorMessage>
+        <name>AcctSeed__Discount_Days_Due_Positive_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The discount % field must be a positive number. --></errorMessage>
+        <name>AcctSeed__Discount_Percent_Positive_Value</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Outstanding_Statements --></label>
+        <name>AcctSeed__Create_Outstanding_Statements</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Statement --></label>
+        <name>AcctSeed__Create_Statement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>RingCentral__Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+</CustomObjectTranslation>

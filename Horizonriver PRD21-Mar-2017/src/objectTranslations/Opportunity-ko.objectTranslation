@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>AcctSeed__TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Installations Complete --></label>
+        <name>All_Install_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment --></label>
+        <name>Attachment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Number --></label>
+        <name>Auto_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Confirmed --></label>
+        <name>Budget_Confirmed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discovery Completed --></label>
+        <name>Discovery_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate Billing --></label>
+        <name>GenerateBilling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Install Complete --></label>
+        <name>Install_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internet Installation Date --></label>
+        <name>Internet_Installation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internet Monthly Billing --></label>
+        <name>Internet_Monthly_Billing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loss Reason --></label>
+        <name>Loss_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Lost to Competitor</masterLabel>
+            <translation><!-- Lost to Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Budget / Lost Funding</masterLabel>
+            <translation><!-- No Budget / Lost Funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Decision / Non-Responsive</masterLabel>
+            <translation><!-- No Decision / Non-Responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Monthy Lease Payment --></label>
+        <name>MonthyLeasePayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Install Status --></label>
+        <name>Network_Install_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisit</masterLabel>
+            <translation><!-- Revisit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Network Installation Date --></label>
+        <name>Network_Installation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Monthly Billing --></label>
+        <name>Network_Monthly_Billing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Terms --></label>
+        <name>Payment_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Personal guarantee --></label>
+        <name>Personal_Guarantee_C__c</name>
+    </fields>
+    <fields>
+        <label><!-- ROI Analysis Completed --></label>
+        <name>ROI_Analysis_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Tax --></label>
+        <name>Sales_Tax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Number --></label>
+        <name>Store_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax --></label>
+        <name>Tax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Payment Due at Delivery --></label>
+        <name>TotalPaymentDueatDelivery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Tax Payment --></label>
+        <name>TotalTaxPayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Switches --></label>
+        <name>of_Switches__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of WAPs --></label>
+        <name>of_WAPs__c</name>
+    </fields>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Installation --></label>
+            <section>Installation</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Billing --></label>
+        <name>AcctSeed__Create_Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Project --></label>
+        <name>AcctSeed__Create_Project</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Recurring_Billing --></label>
+        <name>AcctSeed__Create_Recurring_Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>AcctSeed__DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Billings --></label>
+        <name>Create_Billings</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Lease_PDF --></label>
+        <name>Create_Lease_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_SMS --></label>
+        <name>RingCentral__Send_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_SMS_Opp --></label>
+        <name>RingCentral__Send_SMS_Opp</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,343 @@
+<apex:page Controller="CreateOpportunityController" tabStyle="opportunity"  >
+    
+    <head>
+    <style>
+        body {
+            background-image: url("http://www.w3schools.com/cssref/img_tree.gif");
+            background-repeat:repeat;
+        }
+        input[type="text"] {
+            background: transparent;
+            border:1px solid #000;
+        }   
+        
+        .dropdown-content {
+           
+            font-style: bold;
+            font-size: 150%;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+        }  
+        
+        .search{
+            font-size:14pt;
+            margin-right: 20px;    
+        }
+        .fyi{
+            color:red;
+            font-style:italic;
+        }
+        .label{
+            margin-right:10px;
+            font-weight:bold;
+        }   
+        
+        
+        .myClass{
+            color:white !important;
+            background:#75899e !important;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 25px !important;
+            padding: 22px 16px !important;
+            margin: 14px 12px;
+            }
+            
+            .myClass1{
+            color:white !important;
+            background:#75899e !important;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 25px !important;
+            padding: 18px 12px !important;
+            margin: 14px 12px;
+            }
+            
+            .myClass2{
+            color:white !important;
+            background:#75899e !important;
+            text-align: center;
+            font-size: 15px !important;
+            padding: 13px 12px !important;
+            margin: 10px 8px;
+            }
+    </style>
+    <script type='text/javascript'>
+    
+        // This script assists the search bar functionality
+        // It will execute a search only after the user has stopped typing for more than 1 second
+        // To raise the time between when the user stops typing and the search, edit the following variable:
+        
+        var waitTime = 1;
+        
+    
+        var countDown = waitTime+1;
+        var started = false;
+        
+        function resetTimer(){
+        
+            countDown=waitTime+1;
+            
+            if(started==false){
+                started=true;
+                runCountDown();
+            }
+        }
+        
+        function runCountDown(){
+        
+            countDown--;
+            
+            if(countDown<=0){
+                fetchResults();
+                started=false;
+            }
+            else{
+                window.setTimeout(runCountDown,1000);
+            }
+        }
+    
+    </script>
+    </head>
+    
+    <body>
+    
+     
+     <apex:form rendered="{!FirstPage}">
+     <center>
+     <h2 style="font-family:verdana;color:#007399;font-size:250%;">
+     Welcome to</h2>
+      </center> <br/>
+     <center>
+     <h2 style="font-family:verdana;color:#007399;font-size:250%;">
+     Horizon River Technologies
+     </h2>
+      </center><br/>
+     <center><apex:commandButton action="{!CreateInvoice}" value="Create Opportunity" styleClass="myClass" /></center>
+     </apex:form>
+     
+     
+     <apex:form rendered="{!ProductPage}">
+    
+        <apex:outputPanel id="mainBody">
+        
+            
+            
+<!-- this is the upper table... a.k.a. the "Shopping Cart"-->
+
+            <!-- notice we use a lot of $ObjectType merge fields... I did that because if you have changed the labels of fields or objects it will reflect your own lingo -->
+            <apex:pageBlock title="Selected {!$ObjectType.Product2.LabelPlural}" id="selected">
+                       
+                <apex:pageblockTable value="{!shoppingCart}" var="s">
+                
+                    <apex:column >
+                        <apex:commandLink value="Remove" action="{!removeFromShoppingCart}" reRender="selected,searchResults" immediate="true">
+                            <!-- this param is how we send an argument to the controller, so it knows which row we clicked 'remove' on -->
+                            <apex:param value="{!s.PriceBookEntryId}" assignTo="{!toUnselect}" name="toUnselect"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    
+                    <apex:column headerValue="{!$ObjectType.Product2.LabelPlural}" value="{!s.PriceBookEntry.Product2.Name}"/>
+                    
+                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Quantity.Label}">
+                        <apex:inputField value="{!s.Quantity}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                    </apex:column>
+                    
+                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UnitPrice.Label}">
+                        <apex:inputField value="{!s.UnitPrice}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                    </apex:column>
+                    
+                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Description.Label}">
+                        <apex:inputField value="{!s.Description}" required="false"/>
+                    </apex:column>
+                    
+                </apex:pageblockTable>
+            
+            
+                
+                    
+                   <center> <apex:commandButton action="{!onSave}" value="Save & Next" styleClass="myClass2"/></center>
+                
+            
+            </apex:pageBlock>
+    
+<!-- this is the lower table: search bar and search results -->
+    
+            <apex:pageBlock >
+            
+                <apex:outputPanel styleClass="search">
+                    Search for {!$ObjectType.Product2.LabelPlural}:
+                </apex:outputPanel>
+
+                <apex:actionRegion renderRegionOnly="false" immediate="true">
+                
+                    <apex:actionFunction name="fetchResults" action="{!updateAvailableList}" reRender="searchResults" status="searchStatus"/>
+                    
+                    <!-- here we invoke the scripting to get out fancy 'no button' search bar to work -->
+                    <apex:inputText value="{!searchString}" onkeydown="if(event.keyCode==13){this.blur();}else{resetTimer();}" style="width:300px"/>
+                    &nbsp;&nbsp;
+                    <i>
+                        <!-- actionStatus component makes it easy to let the user know when a search is underway -->
+                        <apex:actionStatus id="searchStatus" startText="searching..." stopText=" "/>
+                    </i>
+                    
+                </apex:actionRegion>
+            
+                <br/>
+                <br/>
+            
+                <apex:outputPanel id="searchResults">
+                
+                    <apex:pageBlockTable value="{!AvailableProducts}" var="a">
+                    
+                        <apex:column headerValue="{!$ObjectType.Product2.Fields.Name.Label}" value="{!a.Product2.Name}" />
+                        
+                        <apex:column headerValue="{!$ObjectType.Product2.Fields.Family.Label}" value="{!a.Product2.Family}"/>
+                        
+                        <apex:column headerValue="{!$ObjectType.Product2.Fields.Description.Label}" value="{!a.Product2.Description}"/>
+                        
+                        <apex:column >
+                            <!-- command button in a column... neato -->
+                            <apex:commandButton value="Select" action="{!addToShoppingCart}" reRender="selected,searchResults" immediate="true">
+                                <!-- again we use apex:param to be able to tell the controller which row we are working with -->
+                                <apex:param value="{!a.Id}" assignTo="{!toSelect}" name="toSelect"/>
+                            </apex:commandButton>
+                        </apex:column>
+                        
+                    </apex:pageBlockTable>
+                    
+                    <!-- We put up a warning if results exceed 100 rows -->
+                    <apex:outputPanel styleClass="fyi" rendered="{!overLimit}">
+                        <br/>
+                        Your search returned over 100 results, use a more specific search string if you do not see the desired {!$ObjectType.Product2.Label}.
+                        <br/>
+                    </apex:outputPanel>
+                    
+                </apex:outputPanel>
+            
+            </apex:pageBlock>
+            
+        </apex:outputPanel>
+
+  
+     
+    </apex:form>
+    
+    <apex:form rendered="{!ChoosePBookPg}">
+     <h2 style="font-family:verdana;color:#007399;font-size:250%;">
+     Choose the PriceBook :
+     </h2>
+     <apex:selectList value="{!PBvalue}" size="1" styleClass="dropdown-content">
+         <apex:selectOptions value="{!PriceBookSelect}"  />
+     </apex:selectList>
+     
+     <br/><br/><br/><br/>
+     
+     <center><apex:commandButton action="{!PBSave}" value="Save & Next" styleClass="myClass2" /></center>
+     
+    </apex:form>
+    
+    <apex:form >
+    
+    <apex:pageBlock title="Opportunity Edit" tabStyle="opportunity" rendered="{!OppLayout}" >
+    
+    
+    <center><apex:commandButton action="{!Next}" value="Next" styleClass="myClass2" /></center>
+   
+    
+    
+    <apex:pageBlockSection columns="2" title="Opportunity Information"> 
+    <apex:inputField value="{!OppObj.name}"  />
+    <apex:inputField value="{!OppObj.CloseDate}"  />
+    <apex:inputField value="{!OppObj.Accountid}"  />
+    <apex:inputField value="{!OppObj.Amount}"  />
+    <apex:inputField value="{!OppObj.Type}"  />
+    <apex:inputField value="{!OppObj.Tax__c}"  />
+    
+    <apex:inputField value="{!OppObj.GenerateBilling__c}"  />
+    <apex:inputField value="{!OppObj.StageName}"  />
+    <apex:inputField value="{!OppObj.MonthyLeasePayment__c}"  />
+    <apex:inputField value="{!OppObj.Probability}"  />
+    <apex:inputField value="{!OppObj.TotalTaxPayment__c}"  />
+    <apex:inputField value="{!OppObj.Personal_Guarantee_C__c}"  />
+    <apex:inputField value="{!OppObj.TotalPaymentDueatDelivery__c}"  />
+    <apex:inputField value="{!OppObj.Attachment__c}"  />
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection columns="2" title="Installation"> 
+    <apex:inputField value="{!OppObj.Install_Complete__c}"  />
+    <apex:inputField value="{!OppObj.Network_Install_Status__c}"  />
+    <apex:inputField value="{!OppObj.Internet_Installation_Date__c}"  />
+    <apex:inputField value="{!OppObj.Network_Installation_Date__c}"  />
+    <apex:inputField value="{!OppObj.Internet_Monthly_Billing__c}"  />
+    
+    
+    <apex:inputField value="{!OppObj.Network_Monthly_Billing__c}"  />
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection columns="2" title="Additional Information"> 
+    
+    
+    <apex:inputField value="{!OppObj.NextStep}"  />
+    <apex:inputField value="{!OppObj.Description}"  />
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection columns="2" title="System Information"> 
+    <apex:outputField value="{!OppObj.Ownerid}"  />
+    </apex:pageBlockSection>
+    
+    <center><apex:commandButton action="{!Next}" value="Next" styleClass="myClass2" /></center>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Quote Edit" tabStyle="Quote" rendered="{!QuoteLayout}"  >
+    
+    
+    <center>
+    <apex:commandButton action="{!CreateQuote}" value="Create Quote" styleClass="myClass2" />
+    </center>
+    
+    
+    <apex:pageBlockSection columns="2" title="Quote Information"> 
+    <apex:outputField value="{!OppObj.Accountid}"  />
+    <apex:inputField value="{!QuoteObj.ExpirationDate}"  />
+    <apex:inputField value="{!QuoteObj.name}"  />
+    <apex:inputField value="{!QuoteObj.IsSyncing}"  />
+    
+    <apex:outputField value="{!OppObj.name}"  />
+    <apex:inputField value="{!QuoteObj.Status}"  />
+    <apex:inputField value="{!QuoteObj.Contactid}"  />
+    <apex:inputField value="{!QuoteObj.PaymentTerms__c}"  />
+    <apex:inputField value="{!QuoteObj.DocusignStatus__c}"  />
+    <apex:inputField value="{!QuoteObj.DS_Envelope_del__c}"  />
+    <!--<apex:inputField value="{!QuoteObj.TransCode__c}"  />-->
+    <apex:inputField value="{!QuoteObj.Quote_Date__c}"  />
+    
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" title="Totals"> 
+    <apex:outputField value="{!QuoteObj.Subtotal}"  />
+    <apex:inputField value="{!QuoteObj.Tax}"  />
+    <apex:outputField value="{!QuoteObj.Discount}"  />
+    <apex:inputField value="{!QuoteObj.ShippingHandling}"  />
+    <apex:outputField value="{!QuoteObj.TotalPrice}"  />
+    <apex:outputField value="{!QuoteObj.GrandTotal}"  />
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" title="Quote From"> 
+    <apex:inputField value="{!QuoteObj.QuoteFrom__c}"  />
+    </apex:pageBlockSection>
+    <center>
+    <apex:commandButton action="{!CreateQuote}" value="Create Quote" styleClass="myClass2" />
+    </center>
+
+    </apex:pageBlock>
+    
+    </apex:form>
+    
+    
+</body>
+
+</apex:page>
