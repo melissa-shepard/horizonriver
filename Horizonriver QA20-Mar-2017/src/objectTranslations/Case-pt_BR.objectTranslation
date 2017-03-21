@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Assigned Group --></label>
+        <name>Assigned_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Group --></label>
+        <name>Assigned_Groups__c</name>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalations</masterLabel>
+            <translation><!-- Escalations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HRSupport</masterLabel>
+            <translation><!-- HRSupport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Support</masterLabel>
+            <translation><!-- Implementation Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Comment --></label>
+        <name>CaseComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Email (Formula) --></label>
+        <name>HRT_Account_Email_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Email --></label>
+        <name>HRT_Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Stage --></label>
+        <name>HRT_Case_Stage__c</name>
+        <picklistValues>
+            <masterLabel>1 - Telecom Team</masterLabel>
+            <translation><!-- 1 - Telecom Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Staging Team</masterLabel>
+            <translation><!-- 2 - Staging Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Field Team</masterLabel>
+            <translation><!-- 3 - Field Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Implementation Team I</masterLabel>
+            <translation><!-- 4 - Implementation Team I --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Implementation Team II</masterLabel>
+            <translation><!-- 5 - Implementation Team II --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Email Send? --></label>
+        <name>Is_Email_Send__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Changed Date --></label>
+        <name>Queue_Changed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Sent --></label>
+        <name>simplesurvey__Survey_Sent__c</name>
+    </fields>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>CaseAssignment</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Case Assignment --></label>
+        <name>Case_Assignment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HRSupport --></label>
+        <name>HRSupport</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Task Assignment --></label>
+        <name>Task_Assignment</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Account Name con&apos;t be changed --></errorMessage>
+        <name>Account_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account Name is required --></errorMessage>
+        <name>Account_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Add Groupname --></errorMessage>
+        <name>UpdateAssignedQueue</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Case_Assignment --></label>
+        <name>Case_Assignment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Case_Assignment_List --></label>
+        <name>Case_Assignment_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Task_Assignment --></label>
+        <name>Task_Assignment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Task_Assignment_List --></label>
+        <name>Task_Assignment_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

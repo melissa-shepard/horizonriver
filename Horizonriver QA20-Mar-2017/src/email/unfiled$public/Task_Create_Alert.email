@@ -1,0 +1,6 @@
+Hello Team,<br/><br/>
+
+The following task has been assigned to you.<br/>
+Task Name: {!Sub_Case__c.Name}<br/><br/>
+
+Click on the link to access the Task: https://cs12.salesforce.com/{!Sub_Case__c.Id}

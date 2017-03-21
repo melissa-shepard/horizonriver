@@ -1,0 +1,5 @@
+Dear Sir/Madam, 
+<br/><br/>
+The {!Sub_Case__c.Name} install is on {!Sub_Case__c.HRT_Cutover_Date__c}. 
+<br/><br/>
+Many Thanks!!!

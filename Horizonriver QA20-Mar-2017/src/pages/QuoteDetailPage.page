@@ -1,0 +1,168 @@
+<apex:page standardController="Quote" extensions="QuoteDetailPageController" id="Pgid" sidebar="false">
+<style>     
+            .myClass2{
+            color:white !important;
+            background:#75899e !important;
+            text-align: center;
+            font-size: 15px !important;
+            padding: 13px 12px !important;
+            margin: 10px 8px;
+            }
+            
+           
+            .fewerMore { display: none;}
+
+</style>
+
+<script>
+    function pagered()
+    {
+      var qid = document.getElementById("Pgid:Fid:Qid").value;
+      window.open("https://qa-horizon.cs12.force.com/Horizon/apex/dsfs__DocuSign_EditEnvelope?DSEID=a0pV00000016P6IIAU&nw=0&SourceID="+qid);
+    }
+</script>
+<!-- Detail Page of Quote-->
+    
+    <apex:form id="Fid" >
+    <apex:inputHidden value="{!qobj.id}" id="Qid"/>
+    <apex:pageBlock title="Quote Edit" tabStyle="Quote" rendered="{!DetailPage}" >
+    
+    
+    <center>
+    <apex:commandButton action="{!Edit}" value="Edit" styleClass="myClass2" />
+    <apex:commandButton value="Send with DocuSign" styleClass="myClass2" onclick="pagered()"  />
+    <apex:commandButton action="{!CalTax}" value="Calculate TAX" styleClass="myClass2" />
+    </center>
+    
+    
+    <apex:pageBlockSection columns="2" title="Quote Information"> 
+    <apex:outputField value="{!qobj.Accountid}"  />
+    <apex:outputField value="{!qobj.ExpirationDate}"  />
+    <apex:outputField value="{!qobj.name}"  />
+    <apex:outputField value="{!qobj.IsSyncing}"  />
+    
+    <apex:outputField value="{!qobj.opportunityid}"  />
+    <apex:outputField value="{!qobj.Status}"  />
+    <apex:outputField value="{!qobj.Contactid}"  />
+    <apex:outputField value="{!qobj.PaymentTerms__c}"  />
+    <apex:outputField value="{!qobj.DocusignStatus__c}"  />
+    <apex:outputField value="{!qobj.DS_Envelope_del__c}"  />
+    
+    <apex:outputField value="{!qobj.Zip_Code__c}"  />
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" title="Totals"> 
+    <apex:outputField value="{!qobj.Subtotal}"  />
+    <apex:outputField value="{!qobj.Tax}"  />
+    <apex:outputField value="{!qobj.Discount}"  />
+    <apex:outputField value="{!qobj.ShippingHandling}"  />
+    <apex:outputField value="{!qobj.TotalPrice}"  />
+    <apex:outputField value="{!qobj.GrandTotal}"  />
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" title="Quote From"> 
+    <apex:outputField value="{!qobj.QuoteFrom__c}"  />
+    </apex:pageBlockSection>
+    <center>
+    <apex:commandButton action="{!Edit}" value="Edit" styleClass="myClass2" />
+    <apex:commandButton action="{!DocuSign}" value="Send with DocuSign" styleClass="myClass2" onclick="pagered()" immediate="true" />
+    <apex:commandButton action="{!CalTax}" value="Calculate TAX" styleClass="myClass2" />
+    </center>
+    
+
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Quote Edit" tabStyle="Quote" rendered="{!EditPage}"  >
+    
+    
+    <center>
+    <apex:commandButton action="{!CancelBt}" value="Cancel" styleClass="myClass2" /> 
+    <apex:commandButton action="{!SaveBt}" value="Save" styleClass="myClass2" />
+    </center>
+    
+    
+    <apex:pageBlockSection columns="2" title="Quote Information"> 
+    <apex:outputField value="{!qobj.Account.name}"  />
+    <apex:inputField value="{!qobj.ExpirationDate}"  />
+    <apex:inputField value="{!qobj.name}"  />
+    <apex:inputField value="{!qobj.IsSyncing}"  />
+    
+    <apex:outputField value="{!qobj.opportunity.name}"  />
+    <apex:inputField value="{!qobj.Status}"  />
+    <apex:inputField value="{!qobj.Contactid}"  />
+    <apex:inputField value="{!qobj.PaymentTerms__c}"  />
+    <apex:inputField value="{!qobj.DocusignStatus__c}"  />
+    <apex:inputField value="{!qobj.DS_Envelope_del__c}"  />
+    <apex:outputField value="{!qobj.Zip_Code__c}"  />
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" title="Totals"> 
+    <apex:outputField value="{!qobj.Subtotal}"  />
+    <apex:inputField value="{!qobj.Tax}"  />
+    <apex:outputField value="{!qobj.Discount}"  />
+    <apex:inputField value="{!qobj.ShippingHandling}"  />
+    <apex:outputField value="{!qobj.TotalPrice}"  />
+    <apex:outputField value="{!qobj.GrandTotal}"  />
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" title="Quote From"> 
+    <apex:inputField value="{!qobj.QuoteFrom__c}"  />
+    </apex:pageBlockSection>
+    
+    <center>
+    <apex:commandButton action="{!CancelBt}" value="Cancel" styleClass="myClass2" /> 
+    <apex:commandButton action="{!SaveBt}" value="Save" styleClass="myClass2" />
+    </center>
+
+    </apex:pageBlock>
+    
+
+    </apex:form> 
+    
+   
+    <apex:form id="formid">
+     <apex:pageMessages />
+     
+    <apex:pageblock id="CustomList" title="Quote Line Items"  >
+        
+       <apex:variable value="{!1}" var="index"/> 
+       <center>
+       <apex:commandButton action="{!Edits}" value="Edit" rendered="{!!flg}" reRender="formid" styleClass="myClass2"/>
+       <apex:commandButton action="{!Saves}" value="Save" rendered="{!flg}" reRender="formid" styleClass="myClass2"/>
+       </center>
+       <apex:pageBlockTable value="{!oppz}" var="o" rendered="{!NOT(ISNULL(oppz))}">
+            <apex:column headerValue="Action">
+                
+                
+                <apex:commandLink value="Del" action="{!Del}" rerender="formid" >
+                
+                    
+                    <apex:param assignTo="{!SelectedID}" value="{!o.id}" name="Selectedid" />
+                    
+                </apex:commandLink>
+                
+                
+                &nbsp;&nbsp;                
+                <apex:variable value="{!index+1}" var="index"/> 
+                
+            </apex:column>
+            <apex:column value="{!o.Product2.name}" />
+            <apex:column value="{!o.Description}"/>
+            <apex:column headerValue="Sales Price">
+            <apex:inputField value="{!o.UnitPrice}" rendered="{!flg}"/>
+            <apex:outputField value="{!o.UnitPrice}" rendered="{!!flg}"/>
+           </apex:column>
+           <apex:column headerValue="Quantity" >
+           <apex:inputField value="{!o.Quantity}" rendered="{!flg}"/>
+           <apex:outputField value="{!o.Quantity}" rendered="{!!flg}"/>
+           </apex:column>
+           <apex:column value="{!o.TotalPrice}"/>
+           
+       </apex:pageBlockTable>
+       <apex:outputLabel value="No records to display" rendered="{!(ISNULL(oppz))}" styleClass="noRowsHeader"></apex:outputLabel>
+     </apex:pageblock>
+    </apex:form>
+    
+<!--<apex:relatedList list="QuoteLineItems" rendered="{!DetailPage}" />-->
+
+</apex:page>

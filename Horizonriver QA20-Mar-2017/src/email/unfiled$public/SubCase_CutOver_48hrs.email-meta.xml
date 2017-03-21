@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SubCase_CutOver_48hrs</name>
+    <style>none</style>
+    <subject>Install For {!Sub_Case__c.Name} in 48hrs</subject>
+    <type>custom</type>
+</EmailTemplate>

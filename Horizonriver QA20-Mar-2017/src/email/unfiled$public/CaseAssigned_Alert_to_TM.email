@@ -1,0 +1,16 @@
+Hi Team,
+<br/><br/>
+The following case has been assigned to you.<br/>
+
+
+
+Case #:  {!Case.CaseNumber}<br/>
+
+Company:  {!Case.Account}<br/>
+Contact Name: {!Case.Contact}<br/>
+
+Subject: {!Case.Subject}<br/>
+Description: {!Case.Description}<br/><br/>
+
+Click on the link to access the case:  https://cs12.salesforce.com/{!Case.Id}<br/><br/>
+Many Thanks!!!

@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>Sub_Cases</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Account_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRT_CP_IMEI__c</fullName>
+        <externalId>false</externalId>
+        <label>CP IMEI</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_CP_MAC__c</fullName>
+        <externalId>false</externalId>
+        <label>CP MAC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Carrier__c</fullName>
+        <externalId>false</externalId>
+        <label>Carrier</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Case_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case__r.CaseNumber</formula>
+        <label>Case Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRT_Circuit_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit 10</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Circuit_Speed__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit Speed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Circuit_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Cutover_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Cutover Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Cutover_process_completion_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Cutover Process Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HRT_HW_MAC__c</fullName>
+        <externalId>false</externalId>
+        <label>HW MAC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_HW_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>HW Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_HW_Serial__c</fullName>
+        <externalId>false</externalId>
+        <label>HW Serial #</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRT_Install_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Install Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Is_Task_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Task Completed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Modem_Validation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Modem Validation Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Notification_Send__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Notification Send?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HRT_P4_Install_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>P4 Install Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Site_Survey__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Survey</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Telecom Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - Staging Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - Field Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - Implementation Team I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - Implementation Team II</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Support_Pin__c</fullName>
+        <externalId>false</externalId>
+        <label>Support Pin</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HRT_Task_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Task State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRT_VZ_CARD__c</fullName>
+        <externalId>false</externalId>
+        <label>VZ CARD #</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sub Task</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Field_Team_Sub_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Field Team</label>
+        <queue>Field_Team</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Implementation_Team_II_Sub_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Implementation Team II</label>
+        <queue>Implementation_Team_II</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Implementation_Team_I_Sub_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Implementation Team I</label>
+        <queue>Implementation_Team_I</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Staging_Team_Sub_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Staging Team</label>
+        <queue>Staging_Team</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Telecom_Team_Sub_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Telecom Team</label>
+        <queue>Telecom_Team</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Sub Case Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Sub Tasks</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Task_1_Order_Circuit</fullName>
+        <active>true</active>
+        <label>Task 1 - Order Circuit</label>
+        <picklistValues>
+            <picklist>HRT_Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Stage__c</picklist>
+            <values>
+                <fullName>1 - Telecom Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Staging Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Field Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Implementation Team I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Implementation Team II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task_2_Staging_Team</fullName>
+        <active>true</active>
+        <label>Task 2 - Staging Team</label>
+        <picklistValues>
+            <picklist>HRT_Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Stage__c</picklist>
+            <values>
+                <fullName>1 - Telecom Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Staging Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Field Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Implementation Team I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Implementation Team II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task_3_CS_Tech_Integration_Sub</fullName>
+        <active>true</active>
+        <label>Task 3 - CS Tech Integration Sub</label>
+        <picklistValues>
+            <picklist>HRT_Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Stage__c</picklist>
+            <values>
+                <fullName>1 - Telecom Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Staging Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Field Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Implementation Team I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Implementation Team II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task_4_CS_Tech</fullName>
+        <active>true</active>
+        <label>Task 4 - CS Tech</label>
+        <picklistValues>
+            <picklist>HRT_Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Stage__c</picklist>
+            <values>
+                <fullName>1 - Telecom Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Staging Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Field Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Implementation Team I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Implementation Team II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task_5_Review_Survey_Results</fullName>
+        <active>true</active>
+        <label>Task 5 - Review Survey Results</label>
+        <picklistValues>
+            <picklist>HRT_Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Stage__c</picklist>
+            <values>
+                <fullName>1 - Telecom Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Staging Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Field Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Implementation Team I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Implementation Team II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HRT_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Completed</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(HRT_Is_Task_Completed__c ,  ISCHANGED(HRT_Status__c )  )</errorConditionFormula>
+        <errorDisplayField>HRT_Status__c</errorDisplayField>
+        <errorMessage>You can&apos;t able to change the status , once completed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_1_Telecom_Team</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(HRT_Stage__c, &apos;1 - Telecom Team&apos;), 
+ISPICKVAL( HRT_Status__c , &apos;Completed&apos;) , 
+OR( 
+ISBLANK(HRT_Circuit_10__c), 
+ISBLANK(HRT_Carrier__c), 
+ISBLANK(HRT_Circuit_Speed__c), 
+ISBLANK(HRT_Circuit_Type__c), 
+ISBLANK(HRT_Support_Pin__c) , 
+ISNULL(HRT_Install_Date__c) , 
+ISNULL(HRT_Modem_Validation_Date__c) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Following fields valus are required: Circuit 10, 
+Carrier, 
+Circuit Speed, 
+Circuit Type, 
+Install Date, 
+Support Pin, 
+Modem Validation Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_2_Staging_Team</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(HRT_Stage__c, &apos;2 - Staging Team&apos;), 
+ISPICKVAL( HRT_Status__c , &apos;Completed&apos;) , 
+OR( 
+ISBLANK(HRT_HW_Serial__c), 
+ISBLANK(HRT_HW_Name__c), 
+ISBLANK(HRT_CP_MAC__c), 
+ISBLANK(HRT_CP_IMEI__c), 
+ISBLANK(HRT_VZ_CARD__c) , 
+ISBLANK(HRT_HW_MAC__c) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Following fields valus are required: HW Serial #, 
+HW Name, 
+CP MAC, 
+CP IMEI, 
+VZ CARD #, 
+HW MAC</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_3_Field_Team</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(HRT_Stage__c, &apos;3 - Field Team&apos;), 
+ISPICKVAL( HRT_Status__c , &apos;Completed&apos;) , 
+ISNULL(HRT_P4_Install_Date__c) 
+)</errorConditionFormula>
+        <errorDisplayField>HRT_P4_Install_Date__c</errorDisplayField>
+        <errorMessage>P4 Install Date is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_4_CS_Tech_Sub</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(HRT_Stage__c, &apos;4 - Implementation Team I&apos;), 
+ISPICKVAL( HRT_Status__c , &apos;Completed&apos;) , 
+ISNULL(HRT_Cutover_Date__c) 
+)</errorConditionFormula>
+        <errorDisplayField>HRT_Cutover_Date__c</errorDisplayField>
+        <errorMessage>Cutover Date is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_5_Implementation_Team_II</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(HRT_Stage__c, &apos;5 - Implementation Team II&apos;), 
+ISPICKVAL( HRT_Status__c , &apos;Completed&apos;) , 
+ISNULL(HRT_Cutover_process_completion_date__c) 
+)</errorConditionFormula>
+        <errorDisplayField>HRT_Cutover_process_completion_date__c</errorDisplayField>
+        <errorMessage>Cutover Process Completion Date 
+is required</errorMessage>
+    </validationRules>
+</CustomObject>

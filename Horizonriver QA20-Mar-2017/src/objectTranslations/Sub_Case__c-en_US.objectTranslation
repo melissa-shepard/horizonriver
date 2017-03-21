@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sub Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sub Tasks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Sub Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Email --></label>
+        <name>HRT_Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- CP IMEI --></label>
+        <name>HRT_CP_IMEI__c</name>
+    </fields>
+    <fields>
+        <label><!-- CP MAC --></label>
+        <name>HRT_CP_MAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier --></label>
+        <name>HRT_Carrier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Number --></label>
+        <name>HRT_Case_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Circuit 10 --></label>
+        <name>HRT_Circuit_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Circuit Speed --></label>
+        <name>HRT_Circuit_Speed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Circuit Type --></label>
+        <name>HRT_Circuit_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cutover Date --></label>
+        <name>HRT_Cutover_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cutover Process Completion Date --></label>
+        <name>HRT_Cutover_process_completion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- HW MAC --></label>
+        <name>HRT_HW_MAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- HW Name --></label>
+        <name>HRT_HW_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- HW Serial # --></label>
+        <name>HRT_HW_Serial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Install Date --></label>
+        <name>HRT_Install_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Task Completed? --></label>
+        <name>HRT_Is_Task_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modem Validation Date --></label>
+        <name>HRT_Modem_Validation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notification Send? --></label>
+        <name>HRT_Notification_Send__c</name>
+    </fields>
+    <fields>
+        <label><!-- P4 Install Date --></label>
+        <name>HRT_P4_Install_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>HRT_Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Site Survey --></label>
+        <name>HRT_Site_Survey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>HRT_Stage__c</name>
+        <picklistValues>
+            <masterLabel>1 - Telecom Team</masterLabel>
+            <translation><!-- 1 - Telecom Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Staging Team</masterLabel>
+            <translation><!-- 2 - Staging Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Field Team</masterLabel>
+            <translation><!-- 3 - Field Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Implementation Team I</masterLabel>
+            <translation><!-- 4 - Implementation Team I --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Implementation Team II</masterLabel>
+            <translation><!-- 5 - Implementation Team II --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>HRT_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Support Pin --></label>
+        <name>HRT_Support_Pin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task State --></label>
+        <name>HRT_Task_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- VZ CARD # --></label>
+        <name>HRT_VZ_CARD__c</name>
+    </fields>
+    <layouts>
+        <layout>Sub Case Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task 1 - Order Circuit</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Telecom Team --></label>
+            <section>Telecom Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task 2 - Staging Team</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Staging Team --></label>
+            <section>Staging Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task 3 - CS Tech Integration Sub</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Field Team --></label>
+            <section>Field Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task 4 - CS Tech</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- CS Tech --></label>
+            <section>CS Tech</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task 5 - Review Survey Results</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Team II --></label>
+            <section>Implementation Team II</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Task 1 - Order Circuit --></label>
+        <name>Task_1_Order_Circuit</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Task 2 - Staging Team --></label>
+        <name>Task_2_Staging_Team</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Task 3 - CS Tech Integration Sub --></label>
+        <name>Task_3_CS_Tech_Integration_Sub</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Task 4 - CS Tech --></label>
+        <name>Task_4_CS_Tech</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Task 5 - Review Survey Results --></label>
+        <name>Task_5_Review_Survey_Results</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t able to change the status , once completed --></errorMessage>
+        <name>Completed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Following fields valus are required: Circuit 10, 
+Carrier, 
+Circuit Speed, 
+Circuit Type, 
+Install Date, 
+Support Pin, 
+Modem Validation Date --></errorMessage>
+        <name>Stage_1_Telecom_Team</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Following fields valus are required: HW Serial #, 
+HW Name, 
+CP MAC, 
+CP IMEI, 
+VZ CARD #, 
+HW MAC --></errorMessage>
+        <name>Stage_2_Staging_Team</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- P4 Install Date is required --></errorMessage>
+        <name>Stage_3_Field_Team</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cutover Date is required --></errorMessage>
+        <name>Stage_4_CS_Tech_Sub</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cutover Process Completion Date 
+is required --></errorMessage>
+        <name>Stage_5_Implementation_Team_II</name>
+    </validationRules>
+</CustomObjectTranslation>
