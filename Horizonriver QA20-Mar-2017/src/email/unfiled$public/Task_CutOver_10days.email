@@ -1,0 +1,7 @@
+Hello Team,
+<br/><br/>
+The Task - {!Task.Subject} Cutover Appointment 10-day scheduled on {!Task.HRT_Cutover_Date__c}.
+<br/><br/>
+Case Number : {!Case.CaseNumber}
+<br/><br/>
+Many Thanks!!!

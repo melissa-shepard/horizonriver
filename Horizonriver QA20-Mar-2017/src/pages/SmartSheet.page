@@ -1,0 +1,20 @@
+<apex:page controller="SmartSheetView" showHeader="false" sidebar="false" action="{!onload}">
+
+  <!--<table border="1">
+  <tr>
+  
+  <th>Store No.</th>
+  <th>Internet Installation Date</th>
+  <th>Network Installation Date</th>
+  </tr>
+  <apex:repeat value="{!SSDatas}" var="a">
+  <tr>
+  
+  <td>{!a.sno}</td>
+  <td>{!a.IIC}</td>
+  <td>{!a.NWIC}</td></tr>
+  
+  </apex:repeat>
+  </table>-->
+
+</apex:page>

@@ -1,0 +1,7 @@
+Hello Team,
+<br/><br/>
+The Task - {!Task.Subject} P4({!Task.HRT_P4_Install_Date__c}) has been Scheduled - 48hrs warning
+<br/><br/>
+Case Number : {!Case.CaseNumber}
+<br/><br/>
+Many Thanks!!!

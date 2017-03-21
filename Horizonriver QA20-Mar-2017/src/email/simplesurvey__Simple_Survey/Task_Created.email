@@ -1,0 +1,5 @@
+Dear Sir/Madam,
+<br/><br/>
+Your case {!Case.CaseNumber} is under the stage {!Task.HRT_Stage__c}
+<br/><br/>
+Many Thanks!!!

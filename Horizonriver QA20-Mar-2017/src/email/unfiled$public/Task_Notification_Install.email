@@ -1,0 +1,7 @@
+Hello Team,
+<br/><br/>
+The Task - {!Task.Subject} install is on {!Task.HRT_Install_Date__c}.
+<br/><br/>
+Case Number : {!Case.CaseNumber}
+<br/><br/>
+Many Thanks!!!

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>HRSupport</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <notifyCcRecipients>true</notifyCcRecipients>
+            <replyToEmail>help_test@horizonriver.com</replyToEmail>
+            <senderEmail>customerservice@horizonriver.com</senderEmail>
+            <senderName>Horizon Customer Service</senderName>
+            <template>unfiled$public/SUPPORTCaseEmailResponse</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Closed</value>
+            </criteriaItems>
+            <notifyCcRecipients>true</notifyCcRecipients>
+            <replyToEmail>help_test@horizonriver.com</replyToEmail>
+            <senderEmail>customerservice@horizonriver.com</senderEmail>
+            <senderName>Horizon Customer Service</senderName>
+            <template>unfiled$public/SupportCaseClosed</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>
